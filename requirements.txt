@@ -8,16 +8,23 @@ mkdocs-material==9.6.20
 # ==============================================================================
 # General Python Dependencies
 # ==============================================================================
-python-dotenv
-ipykernel
+python-dotenv>=1.0.0
+ipykernel>=6.29.0
 
 # ==============================================================================
 # Azure SDK Dependencies
 # ==============================================================================
 # Identity and authentication
-azure-identity
+azure-identity>=1.14.0
 
-# AI and evaluation
-azure-ai-evaluation[redteam]==1.12.0
-azure-ai-projects==1.1.0b3  # Required for cloud-based red teaming (Lab 03) >=1.1.0b3
-azure-ai-agents==1.2.0b3   # Last updated Oct 2025 ==1.2.0b6
+# AI and evaluation (for Labs 1-2: local red teaming)
+azure-ai-evaluation[redteam]>=1.14.0  # Includes PyRIT for red teaming
+
+# AI projects (for Lab 3: cloud-based red teaming, Lab 1: agent management)
+azure-ai-projects>=1.0.0  # Required for cloud red teaming and AIProjectClient
+
+# AI agents (for Lab 1: agent operations with files and vector stores)
+azure-ai-agents>=1.1.0  # Required for agents.files and vector store operations
+
+# OpenAI SDK (for Lab 2: direct model interaction)
+openai>=1.30.0  # Required for Azure OpenAI model testing

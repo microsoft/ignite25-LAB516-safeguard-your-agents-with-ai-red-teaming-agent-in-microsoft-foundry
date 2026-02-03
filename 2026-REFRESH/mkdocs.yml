@@ -1,0 +1,117 @@
+site_name: "AI Red Teaming Agent - 2026"
+site_description: Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry
+site_author: Microsoft
+
+theme:
+  name: material
+  
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/shield-check
+  
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - assets/stylesheets/custom.css
+
+markdown_extensions:
+  # Code highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: ['docs/includes']
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  
+  # Other extensions
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+      toc_depth: 2
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+nav:
+  - Welcome:
+    - 00-welcome/01.md
+    - 00-welcome/02.md
+  - Setup:
+    - 01-setup-project/01.md
+    - 01-setup-project/02.md
+  - Scan Your Agent: 
+    - 02-scan-agent/01.md
+    - 02-scan-agent/02.md
+  - Scan Your Model:
+    - 03-scan-model/01.md
+    - 03-scan-model/02.md
+  - Scan In Cloud:
+    - 04-scan-cloud/01.md
+    - 04-scan-cloud/02.md
+  - Resources:
+    - resources.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/microsoft/ignite25-LAB516-safeguard-your-agents-with-ai-red-teaming-agent-in-azure-ai-foundry
+  generator: false
+
+copyright: Copyright &copy; 2025-present Microsoft

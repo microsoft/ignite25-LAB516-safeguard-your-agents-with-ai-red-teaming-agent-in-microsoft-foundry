@@ -1,0 +1,83 @@
+/* Custom sidebar styling */
+
+/* Hide the site name at the top of sidebar */
+.md-nav--primary .md-nav__title {
+  display: none;
+}
+
+/* Remove top margin/padding from sidebar navigation */
+.md-nav--primary > .md-nav__list {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Section headers (bold titles) */
+.md-nav__item--section > .md-nav__link {
+  font-weight: 700 !important;
+  color: var(--md-default-fg-color) !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Add separator line after each section */
+.md-nav__item--section {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Remove separator from last section */
+.md-nav__item--section:last-of-type {
+  border-bottom: none;
+}
+
+/* Style for regular navigation items */
+.md-nav__item:not(.md-nav__item--section) .md-nav__link {
+  font-weight: 400 !important;
+  font-size: 0.75rem !important;
+  padding-left: 1rem !important;
+}
+
+/* Active/current page styling */
+.md-nav__link--active {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* Hover effect for links */
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* Remove nested nav indentation for cleaner look */
+.md-nav--secondary .md-nav__list {
+  padding-left: 0 !important;
+}
+
+/* Adjust spacing for nested items */
+.md-nav__item .md-nav__item {
+  padding-left: 0.5rem;
+}
+
+/* Content header styling - add faint line separators */
+.md-content h1 {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.md-content h2 {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.md-content h3 {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.08);
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
